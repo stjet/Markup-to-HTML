@@ -1,0 +1,17 @@
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta property="og:title" content="{{ metadata.title }}">
+    <meta property="og:description" content="{{ metadata.description }}">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ metadata.title }}</title>
+    <link href="/markdown.css" rel="stylesheet" type="text/css" />
+  </head>
+  <body>
+    <a href="/" id="back">Take me back!</a>
+    <br>
+    <div id="markdown">
+      {{ md }}
+    </div>
+  </body>
+</html>

@@ -1,0 +1,34 @@
+#back {
+  float: right;
+  text-decoration: none;
+  color: blue;
+}
+
+#markdown {
+  margin: 3%;
+}
+
+#markdown *:not(.code-block, code) {
+  font-family: "Segoe UI";
+}
+
+#markdown .code-block {
+  font-family: monospace;
+  background-color: lightgray;
+  padding: 5px;
+  white-space: break-spaces;
+}
+
+#markdown code {
+  font-family: monospace;
+  background-color: lightgray;
+  padding-left: 3px;
+  padding-right: 3px;
+}
+
+#markdown blockquote {
+  border-left: 5px solid blue;
+  background-color: lightblue;
+  padding: 15px;
+  margin-left: 0px;
+}

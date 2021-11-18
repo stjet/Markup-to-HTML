@@ -1,0 +1,17 @@
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta property="og:title" content="">
+    <meta property="og:description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+    <link href="/index.css" rel="stylesheet" type="text/css" />
+  </head>
+  <body>
+    <ul>
+      {% for article in articles %}
+        <li><a href="{{ article.url }}">{{ article.title }}</a></li>
+      {% endfor %}
+    </ul>
+  </body>
+</html>
