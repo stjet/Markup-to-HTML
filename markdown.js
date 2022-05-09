@@ -97,11 +97,11 @@ function markdown_to_html(markdown_file) {
       paragraph = false;
     } else if (line.startsWith("## ")) {
       line = line.replace("## ","");
-      line = "<h2>"+line+"</h2>";
+      line = "<h2 id='"+line.toLowerCase().replace(/ /g,'-')+"'>"+line+"</h2>";
       paragraph = false;
     } else if (line.startsWith("# ")) {
       line = line.replace("# ","");
-      line = "<h1>"+line+"</h1>";
+      line = "<h1 id='"+line.toLowerCase().replace(/ /g,'-')+"'>"+line+"</h1>";
       paragraph = false;
     }
     //check for unordered lists
@@ -130,14 +130,16 @@ function markdown_to_html(markdown_file) {
     //check for bold
     //line.split("**").length-1 gets the amount of ** in a string
     if (line.split("**").length - 1 > 1) {
-      for (i=0; i < Math.floor(line.split("**").length-1/2); i++) {
+      let num = Math.floor((line.split("**").length-1)/2)
+      for (i=0; i < num; i++) {
         line = line.replace("**","<b>");
         line = line.replace("**","</b>");
       }
     }
     //check for underlines
     if (line.split("__").length - 1 > 1) {
-      for (i=0; i < Math.floor(line.split("__").length-1/2); i++) {
+      let num = Math.floor((line.split("__").length-1)/2)
+      for (i=0; i < num; i++) {
         line = line.replace("__","<u>");
         line = line.replace("__","</u>");
       }

@@ -12,6 +12,9 @@ app.get('/', async function (req, res) {
   let articles = markdown.get_articles();
   let articles_obj = [];
   for (i=0; i < articles.length; i++) {
+    if (!markdown.get_metadata("articles/"+articles[i]).title) {
+      continue;
+    }
     articles_obj.push({"title":markdown.get_metadata("articles/"+articles[i]).title, "url":"/articles/"+articles[i].replace(".md","")})
   }
   return res.send(nunjucks.render('index.html', {"articles": articles_obj}));

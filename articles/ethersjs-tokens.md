@@ -1,5 +1,6 @@
 //{"Contributors":["jetstream0"], "title":"How to Send Tokens Using Ethers.js", "description": "Sending tokens with Ethers.js is simple"}
 # How to Send Tokens Using Ethers.js
+---
 [Ethers.js](https://github.com/ethers-io/ethers.js/) is a great javascript library for interacting with the Ethereum blockchain.
 One of the more useful things it can do is interact with ERC-20 Smart Contracts, aka Tokens.
 Here's the code:
