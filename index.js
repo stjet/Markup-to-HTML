@@ -25,7 +25,7 @@ app.get('/articles/:article', async function (req, res) {
     let metadata = markdown.get_metadata("articles/"+req.params.article+".md");
     return res.send(nunjucks.render('md.html', {md: markdown.markdown_to_html(markdown.escape_html("articles/"+req.params.article+".md")), metadata: metadata}))
   }
-  return res.send(404);
+  return res.sendStatus(404);
 })
 
 app.listen(8081, async () => {
