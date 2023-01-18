@@ -10,6 +10,7 @@
 
 #markdown *:not(.code-block, code) {
   font-family: "Segoe UI";
+  word-wrap: break-word;
 }
 
 #markdown .code-block {
@@ -31,4 +32,8 @@
   background-color: lightblue;
   padding: 15px;
   margin-left: 0px;
+}
+
+img {
+  max-width: 100%;
 }
